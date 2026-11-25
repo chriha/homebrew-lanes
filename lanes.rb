@@ -5,23 +5,23 @@
 class Lanes < Formula
   desc "Vim-style terminal UI for work items, with actions run in tmux sessions"
   homepage "https://github.com/chriha/lanes"
-  version "1.3.0"
+  version "1.4.0"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chriha/lanes/releases/download/v1.3.0/lanes_1.3.0_darwin_amd64.tar.gz"
-      sha256 "d167724fa12e1c25c5514d34accbdb1f782dca8beed543b9d968ce56183fb6e1"
+      url "https://github.com/chriha/lanes/releases/download/v1.4.0/lanes_1.4.0_darwin_amd64.tar.gz"
+      sha256 "6dcd7a4f9ee8594e32f9cc1a28bfa606881b39789d047f07c8f30277c82197a4"
 
       define_method(:install) do
         bin.install "lanes"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chriha/lanes/releases/download/v1.3.0/lanes_1.3.0_darwin_arm64.tar.gz"
-      sha256 "935991cd307816cd74599c8016cfc67908750087c7136850ee9b3667237dfb18"
+      url "https://github.com/chriha/lanes/releases/download/v1.4.0/lanes_1.4.0_darwin_arm64.tar.gz"
+      sha256 "ceff27b429c7333599d2ed9f09b273e9e9a733dfd47afc552244e2c10bab5c13"
 
       define_method(:install) do
         bin.install "lanes"
@@ -31,15 +31,15 @@ class Lanes < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chriha/lanes/releases/download/v1.3.0/lanes_1.3.0_linux_amd64.tar.gz"
-      sha256 "86a5b606ab23fa8f238785b7b4b4d940be8f5df371fb33aef9b0d72f75ce8f45"
+      url "https://github.com/chriha/lanes/releases/download/v1.4.0/lanes_1.4.0_linux_amd64.tar.gz"
+      sha256 "91eea72b6df2196edfe84d32c670e2ae2f9b01ed57bc59de9fee05a401e0ecde"
       define_method(:install) do
         bin.install "lanes"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chriha/lanes/releases/download/v1.3.0/lanes_1.3.0_linux_arm64.tar.gz"
-      sha256 "c2c31ef710d8a0812946de06727314ccb32b0dae014e3dd85f3549e0131d566f"
+      url "https://github.com/chriha/lanes/releases/download/v1.4.0/lanes_1.4.0_linux_arm64.tar.gz"
+      sha256 "db6997b5583b3c21ac8b620676f535d6d13cd7aed212b6eb257322b330876482"
       define_method(:install) do
         bin.install "lanes"
       end
